@@ -81,17 +81,17 @@ const config: HardhatUserConfig = {
         // Ethereum:
         ethereum: {
             chainId: 1,
-            url: envs.ETHEREUM_URL,
+            url: envs.ETHEREUM_URL ?? "",
             accounts: [...ethereumMainnetKeys]
         },
         sepolia: {
             chainId: 11155111,
-            url: envs.SEPOLIA_URL,
+            url: envs.SEPOLIA_URL ?? "",
             accounts: [...ethereumTestnetKeys]
         },
         holesky: {
             chainId: 17000,
-            url: envs.HOLESKY_URL,
+            url: envs.HOLESKY_URL ?? "",
             accounts: [...ethereumTestnetKeys]
         }
     },
