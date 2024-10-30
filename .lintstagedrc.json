@@ -1,5 +1,5 @@
 {
-    "*": "npx prettier --ignore-unknown --write",
+    "*": "npx prettier -u --write",
     "*.sol": "npx solhint --fix",
     "*.{ts,js,json,mjs}": "npx eslint --fix"
 }
