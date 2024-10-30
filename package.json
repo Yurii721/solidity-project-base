@@ -29,7 +29,7 @@
         "lint:ts:fix": "npx prettier --write \"**/*.{ts,js}\" && npx eslint . --fix",
         "lint:sol": "npx hardhat check && npx prettier --check \"contracts/**/*.sol\"",
         "lint:sol:fix": "npx solhint --fix \"contracts/**/*.sol\" && npx prettier --write \"contracts/**/*.sol\"",
-        "prepare": "husky"
+        "prepare": "husky && mkdir -p contracts test"
     },
     "engines": {
         "node": "^20.11.0 || ^21.2.0",
