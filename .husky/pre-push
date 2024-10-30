@@ -1,13 +1,17 @@
 npm run gen:abi
-npx prettier --ignore-unknown --write "abi/**/*"
-git add abi/
+npx prettier -u --no-error-on-unmatched-pattern --write "abi/**/*"
+if [ -d "abi/" ]; then
+    git add abi/
+fi
 if ! git diff --cached --quiet; then
     git commit -m "chore(\`abi/\`): update";
 fi
 
 npm run gen:docs
-npx prettier --ignore-unknown --write "docs/**/*"
-git add docs/
+npx prettier -u --no-error-on-unmatched-pattern --write "docs/**/*"
+if [ -d "docs/" ]; then
+    git add docs/
+fi
 if ! git diff --cached --quiet; then
     git commit -m "chore(\`docs/\`): update";
 fi
