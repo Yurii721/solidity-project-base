@@ -10,7 +10,8 @@
                 "useTabs": false,
                 "singleQuote": false,
                 "bracketSpacing": true,
-                "explicitTypes": "preserve"
+                "explicitTypes": "preserve",
+                "compiler": "0.8.0"
             }
         },
         {
@@ -32,6 +33,12 @@
                 "tabWidth": 4,
                 "useTabs": false,
                 "singleQuote": false
+            }
+        },
+        {
+            "files": "contracts/outdated-requires-because-of-imports/**/*.sol",
+            "options": {
+                "compiler": "0.7.3"
             }
         }
     ]
